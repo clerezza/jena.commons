@@ -18,8 +18,7 @@
  */
 package org.apache.clerezza.rdf.jena.commons;
 
-import com.hp.hpl.jena.datatypes.TypeMapper;
-import com.hp.hpl.jena.graph.Node;
+
 import java.util.Map;
 import org.apache.clerezza.commons.rdf.BlankNode;
 import org.apache.clerezza.commons.rdf.BlankNodeOrIRI;
@@ -27,6 +26,8 @@ import org.apache.clerezza.commons.rdf.IRI;
 import org.apache.clerezza.commons.rdf.Literal;
 import org.apache.clerezza.commons.rdf.RDFTerm;
 import org.apache.clerezza.commons.rdf.Triple;
+import org.apache.jena.datatypes.TypeMapper;
+import org.apache.jena.graph.Node;
 
 
 /**
@@ -52,7 +53,7 @@ public class Tria2JenaUtil {
         if (literal == null) {
             throw new IllegalArgumentException("null argument not allowed");
         }
-        return com.hp.hpl.jena.graph.NodeFactory.createLiteral(
+        return org.apache.jena.graph.NodeFactory.createLiteral(
                             literal.getLexicalForm(),
                             literal.getLanguage() == null ? null : literal.getLanguage().
                             toString(), literal.getLanguage() == null ? TypeMapper.getInstance().
@@ -75,7 +76,7 @@ public class Tria2JenaUtil {
         if (uriRef == null) {
             throw new IllegalArgumentException("null argument not allowed");
         }
-        return com.hp.hpl.jena.graph.Node.createURI(
+        return org.apache.jena.graph.NodeFactory.createURI(
                         uriRef.getUnicodeString());
     }
 
@@ -92,23 +93,23 @@ public class Tria2JenaUtil {
         }
         Node result = tria2JenaBNodes.get(bnode);
         if (result == null && createBlankNode) {
-            result = com.hp.hpl.jena.graph.Node.createAnon();
+            result = org.apache.jena.graph.NodeFactory.createBlankNode();
             tria2JenaBNodes.put(bnode, result);
         }
         return result;
     }
 
-    public com.hp.hpl.jena.graph.Triple convertTriple(Triple triple) {
+    public org.apache.jena.graph.Triple convertTriple(Triple triple) {
         return convertTriple(triple, false);
     }
 
-    public com.hp.hpl.jena.graph.Triple convertTriple(Triple triple, boolean createBlankNodes) {
+    public org.apache.jena.graph.Triple convertTriple(Triple triple, boolean createBlankNodes) {
         Node subject = convert2JenaNode(triple.getSubject(), createBlankNodes);
         Node predicate = convert2JenaNode(triple.getPredicate());
         Node object = convert2JenaNode(triple.getObject(), createBlankNodes);
         if (subject == null || object == null) {
             return null;
         }
-        return new com.hp.hpl.jena.graph.Triple(subject, predicate, object);
+        return new org.apache.jena.graph.Triple(subject, predicate, object);
     }
 }

@@ -18,7 +18,6 @@
  */
 package org.apache.clerezza.rdf.jena.commons;
 
-import com.hp.hpl.jena.graph.Node;
 import java.util.Map;
 import org.apache.clerezza.commons.rdf.BlankNode;
 import org.apache.clerezza.commons.rdf.BlankNodeOrIRI;
@@ -29,6 +28,7 @@ import org.apache.clerezza.commons.rdf.RDFTerm;
 import org.apache.clerezza.commons.rdf.Triple;
 import org.apache.clerezza.commons.rdf.impl.utils.LiteralImpl;
 import org.apache.clerezza.commons.rdf.impl.utils.TripleImpl;
+import org.apache.jena.graph.Node;
 
 /**
  *
@@ -129,7 +129,7 @@ public class Jena2TriaUtil {
         throw new RuntimeException("cannot convert " + node + " to BlankNodeOrIRI");
     }
 
-    public Triple convertTriple(com.hp.hpl.jena.graph.Triple triple) {
+    public Triple convertTriple(org.apache.jena.graph.Triple triple) {
         BlankNodeOrIRI subject = convertNonLiteral(triple.getSubject());
         IRI predicate = convertJenaUri2UriRef(triple.getPredicate());
         RDFTerm object = convertJenaNode2Resource(triple.getObject());

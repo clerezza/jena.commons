@@ -19,8 +19,9 @@
 
 package org.apache.clerezza.rdf.jena.commons;
 
-import com.hp.hpl.jena.graph.Node;
+
 import org.apache.clerezza.commons.rdf.BlankNode;
+import org.apache.jena.graph.Node;
 
 /**
  *
