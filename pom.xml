@@ -66,4 +66,9 @@
             </exclusions>
         </dependency>
     </dependencies>
+    <scm>
+        <developerConnection>scm:git:git@github.com:clerezza/jena.commons.git</developerConnection>
+        <connection>scm:git:https://github.com/clerezza/jena.commons.git</connection>
+        <url>https://github.com/clerezza/jena.commons</url>
+    </scm>
 </project>
