@@ -22,14 +22,14 @@
 
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <artifactId>clerezza</artifactId>
-        <groupId>org.apache.clerezza</groupId>
-        <version>7</version>
+        <groupId>org.wymiwyg</groupId>
+        <artifactId>wymiwyg</artifactId>
+        <version>0.9.8</version>
         <relativePath></relativePath>
     </parent>
     <groupId>org.wymiwyg.clerezza</groupId>
     <artifactId>rdf.jena.commons</artifactId>
-    <packaging>bundle</packaging>
+    <packaging>jar</packaging>
     <version>2.0.0-SNAPSHOT</version>
     <name>Clerezza - RDF - Jena - Commons</name>
     <description>Common classes needed by Jena adaptors</description>
