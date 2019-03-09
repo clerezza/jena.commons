@@ -20,7 +20,7 @@
 package org.apache.clerezza.rdf.jena.commons;
 
 
-import org.apache.clerezza.commons.rdf.BlankNode;
+import org.apache.clerezza.api.BlankNode;
 import org.apache.jena.graph.Node;
 
 /**

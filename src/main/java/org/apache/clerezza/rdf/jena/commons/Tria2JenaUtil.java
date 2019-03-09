@@ -20,12 +20,12 @@ package org.apache.clerezza.rdf.jena.commons;
 
 
 import java.util.Map;
-import org.apache.clerezza.commons.rdf.BlankNode;
-import org.apache.clerezza.commons.rdf.BlankNodeOrIRI;
-import org.apache.clerezza.commons.rdf.IRI;
-import org.apache.clerezza.commons.rdf.Literal;
-import org.apache.clerezza.commons.rdf.RDFTerm;
-import org.apache.clerezza.commons.rdf.Triple;
+import org.apache.clerezza.api.BlankNode;
+import org.apache.clerezza.api.BlankNodeOrIRI;
+import org.apache.clerezza.api.IRI;
+import org.apache.clerezza.api.Literal;
+import org.apache.clerezza.api.RDFTerm;
+import org.apache.clerezza.api.Triple;
 import org.apache.jena.datatypes.TypeMapper;
 import org.apache.jena.graph.Node;
 
