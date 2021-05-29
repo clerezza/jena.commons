@@ -27,7 +27,7 @@
     <groupId>org.wymiwyg.clerezza</groupId>
     <artifactId>rdf.jena.commons</artifactId>
     <packaging>jar</packaging>
-    <version>2.0.1-SNAPSHOT</version>
+    <version>2.0.1</version>
     <name>Clerezza - RDF - Jena - Commons</name>
     <description>Common classes needed by Jena adaptors</description>
     <dependencyManagement>
@@ -67,6 +67,6 @@
         <developerConnection>scm:git:git@github.com:clerezza/jena.commons.git</developerConnection>
         <connection>scm:git:https://github.com/clerezza/jena.commons.git</connection>
         <url>https://github.com/clerezza/jena.commons</url>
-      <tag>HEAD</tag>
+      <tag>rdf.jena.commons-2.0.1</tag>
   </scm>
 </project>
